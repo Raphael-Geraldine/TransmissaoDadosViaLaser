@@ -140,9 +140,9 @@ void IRAM_ATTR onTimer() {
     if (iparear < 3)
     {
       if ((caracter >> caracbit) & 1)
-        digitalWrite(D6, HIGH);
+        GPIO.out_w1ts = (1 << 9); //HIGH
       else
-        digitalWrite(D6, LOW);
+        GPIO.out_w1tc = (1 << 9); //LOW
         
       caracbit++;
       if (caracbit > 7)
@@ -164,9 +164,9 @@ void IRAM_ATTR onTimer() {
     int bite = (caracter >> caracbit) & 1;
     
     if (bite)
-      digitalWrite(D6, HIGH);
+      GPIO.out_w1ts = (1 << 9); //HIGH
     else
-      digitalWrite(D6, LOW);
+      GPIO.out_w1tc = (1 << 9); //LOW
     
     caracbit++;
     if (caracbit > 7)
@@ -190,9 +190,9 @@ void setup() {
   
   delay(4000);
 
-  digitalWrite(D6, HIGH);
+  GPIO.out_w1ts = (1 << 9); //HIGH
   delay(1000);
-  digitalWrite(D6, LOW);
+  GPIO.out_w1tc = (1 << 9); //LOW
 
   setCpuFrequencyMhz(240);
   xTaskCreatePinnedToCore(configureTimer, "ConfigTimer", 2000, NULL, 1, NULL, 1); //task associada ao core 1
