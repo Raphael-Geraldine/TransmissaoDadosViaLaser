@@ -122,7 +122,7 @@ void IRAM_ATTR onTimer() {
   if (!parear2)
   {
     timerAlarmWrite(timer, BIT_TIME, true);
-    int bite = digitalRead (D4);
+    bool bite = GPIO.in & (1<<7);
     if (bite)
       bites[caracbit]=1;
     else
@@ -142,7 +142,7 @@ void IRAM_ATTR onTimer() {
   }
   else
   {
-    int bite = digitalRead (D4);
+    bool bite = GPIO.in & (1<<7);
   
     if (bite)
       bites[caracbit]=1;
