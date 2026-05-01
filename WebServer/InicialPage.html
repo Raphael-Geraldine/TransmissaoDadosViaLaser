@@ -39,7 +39,7 @@
           border-radius: 10px; 
           font-weight: bold; 
 
-          transition: background-color 0.3s ease;
+          transition: background-color 0.5s ease;
         }  
 
         .send
@@ -48,7 +48,7 @@
         } 
         .send:hover
         {
-            background-color: #21933c;
+          background-color: #1c7e33;
         }
 
         .receive 
@@ -57,27 +57,27 @@
         }
         .receive:hover
         {
-            background-color: #ba2a38;
+          background-color: #9b222e;
         }
 
         .align
         { 
           display: block;
           padding: 15px 25px; 
-          margin: 10px 200px; 
+          max-width: 300px;
+          margin: 20px auto 0px auto;
           color: white; 
           background: #082cbe; 
         }
         .align:hover
         {
-            background-color: #0a2696;
+          background-color: #081f79;
         } 
 
 
         .status 
         { 
           color: #161616; 
-          margin-bottom: 70px; 
         }
         
     </style>
@@ -89,13 +89,13 @@
         <div class="status">
             Status: <br>
             <strong style="color: #007BFF; font-size: 1.2em;">%TEXTO_SALVO%</strong>
-            <br>
-        <div>
+        </div>
             
         <a href="/envio" class="btn send">Envio de dados</a>
-        <a href="/recepcoo" class="btn receive">Recepção de dados</a>
+        <a href="/recepcao" class="btn receive">Recepção de dados</a>
 
         <a href="/alinhamento" class="btn align">Alinhar as bases</a>
-    <div>
+        <br>
+      </div>
 </body>
 </html>
