@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP32 Nano - Painel</title>
+    <style>
+        body 
+        { 
+          font-family: sans-serif; 
+          text-align: center; 
+          background: #cecece; 
+          padding: 20px; 
+         }
+        
+         
+        .card 
+        { 
+          background: rgb(232, 230, 230); 
+          outline: 2.5px solid blue;
+          outline-offset: 0px;
+          padding: 20px; 
+          border-radius: 40px; 
+          box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+          display: inline-block; 
+          min-width: 300px;     
+          max-width: 700px;
+        }
+        
+        
+        .btn 
+        { 
+          display: inline-block; 
+          padding: 15px 25px; 
+          margin: 10px; 
+          margin-top: 40px;
+          color: white; 
+          text-decoration: none; 
+          border-radius: 10px; 
+          font-weight: bold; 
+
+          transition: background-color 0.3s ease;
+        }  
+
+        .send
+        { 
+          background: #28a745; 
+        } 
+        .send:hover
+        {
+            background-color: #21933c;
+        }
+
+        .receive 
+        { 
+          background: #dc3545; 
+        }
+        .receive:hover
+        {
+            background-color: #ba2a38;
+        }
+
+        .align
+        { 
+          display: block;
+          padding: 15px 25px; 
+          margin: 10px 200px; 
+          color: white; 
+          background: #082cbe; 
+        }
+        .align:hover
+        {
+            background-color: #0a2696;
+        } 
+
+
+        .status 
+        { 
+          color: #161616; 
+          margin-bottom: 70px; 
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Escolha o modo de operação</h1>
+            
+        <div class="status">
+            Status: <br>
+            <strong style="color: #007BFF; font-size: 1.2em;">%TEXTO_SALVO%</strong>
+            <br>
+        <div>
+            
+        <a href="/envio" class="btn send">Envio de dados</a>
+        <a href="/recepcoo" class="btn receive">Recepção de dados</a>
+
+        <a href="/alinhamento" class="btn align">Alinhar as bases</a>
+    <div>
+</body>
+</html>
